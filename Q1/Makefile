@@ -1,12 +1,5 @@
-compile1:
-# 	Compile your code for first part here
+compile:
+	nasm -f bin Q1_2019126.asm -o Q1_2019126.bin
 
-run1: compile1
-# 	 Execute part 1 here
-
-compile2:
-# 	Compile your code for second part here
-
-run2: compile2
-#	Execute part 2 here
-
+run: compile
+	qemu-system-x86_64 -fda Q1_2019126.bin
